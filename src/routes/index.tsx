@@ -517,49 +517,54 @@ const PERFORMERS = [
   { name: "Swami Vedraj", role: "Spiritual Discourse", img: artistSwami },
 ];
 
-function Performers() {
-  return (
-    <section id="performers" className="relative py-32 bg-gradient-parchment">
-      <div className="mx-auto max-w-7xl px-6">
-        <motion.div {...fadeUp} className="text-center">
-          <p className="text-xs uppercase tracking-[0.5em] text-brass/70">A Night Of</p>
-          <h2 className="mt-4 font-display text-4xl sm:text-6xl text-gold-foil">
-            Featured Performers
-          </h2>
-          <Ornament className="mt-6" />
-        </motion.div>
+  function Performers() {
+    return (
+      <section id="performers" className="relative py-32 bg-gradient-parchment">
+        <div className="mx-auto max-w-7xl px-6">
+          <motion.div {...fadeUp} className="text-center">
+            <p className="text-xs uppercase tracking-[0.5em] text-brass/70">A Night Of</p>
+            <h2 className="mt-4 font-display text-4xl sm:text-6xl text-gold-foil">
+              Featured Performers
+            </h2>
+            <Ornament className="mt-6" />
+          </motion.div>
 
-        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {PERFORMERS.map((p, i) => (
-            <motion.div
-              key={p.name}
-              {...fadeUp}
-              transition={{ duration: 0.7, delay: i * 0.1, ease: "easeOut" }}
-              className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-divine transition-all"
-            >
-              <div className="aspect-[3/4] overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.name}
-                  loading="lazy"
-                  width={1024}
-                  height={1280}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brass/90 via-brass/20 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <h3 className="font-display text-2xl text-ivory">{p.name}</h3>
-                  <p className="mt-1 text-xs uppercase tracking-[0.3em] text-gold-soft">{p.role}</p>
+          <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {PERFORMERS.map((p, i) => (
+              <motion.div
+                key={p.name}
+                {...fadeUp}
+                transition={{ duration: 0.7, delay: i * 0.1, ease: "easeOut" }}
+                className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-divine transition-all"
+              >
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    loading="lazy"
+                    width={1024}
+                    height={1280}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brass/90 via-brass/20 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-3 md:p-6">
+  <h3 className="font-display text-sm sm:text-base md:text-2xl text-ivory leading-tight break-words">
+    {p.name}
+  </h3>
+
+  <p className="mt-1 text-[9px] sm:text-[10px] md:text-xs uppercase tracking-[0.12em] md:tracking-[0.3em] text-gold-soft">
+    {p.role}
+  </p>
+</div>
+                  <span className="absolute inset-0 animate-shimmer opacity-0 group-hover:opacity-100 transition" />
                 </div>
-                <span className="absolute inset-0 animate-shimmer opacity-0 group-hover:opacity-100 transition" />
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  );
-}
+      </section>
+    );
+  }
 
 /* ---------------- SPIRITUAL LEADER ---------------- */
 function SpiritualLeader() {
