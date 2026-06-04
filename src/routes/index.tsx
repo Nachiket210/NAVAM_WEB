@@ -10,25 +10,27 @@ import {
 } from "lucide-react";
 import { useMotionValue, useSpring, useInView } from "motion/react";
 import { useRef } from "react";
+import { MapPin } from "lucide-react";
 
-import heroDiya from "@/assets/hero-diya.png";
-import templeBg from "@/assets/temple-bg.jpg";
-import pujaRitual from "@/assets/puja-ritual.jpg";
-import dholPathak from "@/assets/dhol-pathak.jpg";
-import aartiPandits from "@/assets/aarti-pandits.jpg";
-import artistAbhi from "@/assets/artist-abhi.jpg";
-import artistJJ from "@/assets/artist-jj.jpg";
-import artistAnuj from "@/assets/artist-anuj.jpg";
-import artistSwami from "@/assets/artist-swami.jpg";
-import spiritualLeader from "@/assets/spiritual-leader.jpg";
-import navagrahaMandala from "@/assets/navagraha-mandala.jpg";
-import concertCrowd from "@/assets/concert-crowd.jpg";
+import heroDiya from "../assets/hero-diya.png";
+import templeBg from "../assets/temple-bg.jpg"
+import pujaRitual from "../assets/puja-ritual.jpg";
+import dholPathak from "../assets/dhol-pathak.jpg";
+import aartiPandits from "../assets/aarti-pandits.jpg";
+import artistAbhi from "../assets/artist-abhi.jpg";
+import artistJJ from "../assets/artist-jj.jpg";
+import artistAnuj from "../assets/artist-anuj.jpg";
+import artistSwami from "../assets/artist-swami.jpg";
+import spiritualLeader from "../assets/spiritual-leader.jpg";
+import navagrahaMandala from "../assets/navagraha-mandala.jpg";
+import concertCrowd from "../assets/concert-crowd.jpg";
 
-import logo from "@/assets/logo.svg";
 
-import { Particles } from "@/components/navam/Particles";
-import { Ornament, CornerOrnament } from "@/components/navam/Ornament";
-import { Countdown } from "@/components/navam/Countdown";
+import logo from "../assets/logo.png";
+
+import { Particles } from "../components/navam/Particles";
+import { Ornament, CornerOrnament } from "../components/navam/Ornament";
+import { Countdown } from "../components/navam/Countdown";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -77,22 +79,23 @@ const fadeUp = {
 
 function NavamLanding() {
   return (
-<main className="relative overflow-x-hidden">
-  <Nav />
-  <Hero />
-  <Intro />
-  <Timeline />
-  <Highlights />
-  <Navagrahas />
-  <Performers />
-  <SpiritualLeader />
-  <SocialProof />
-  <FAQ />
-  <FinalCTA />
-  <Footer />
-
-  <ScrollToTopButton />
-</main>
+    <div className="min-h-screen w-full bg-ivory text-foreground overflow-x-hidden">
+      <main className="relative w-full">
+        <Nav />
+        <Hero />
+        <Intro />
+        <Timeline />
+        <Highlights />
+        <Navagrahas />
+        <Performers />
+        <SpiritualLeader />
+        <SocialProof />
+        <FAQ />
+        <FinalCTA />
+        <Footer />
+        <ScrollToTopButton />
+      </main>
+    </div>
   );
 }
 
@@ -120,7 +123,7 @@ function Nav() {
       <div className="mx-auto max-w-5xl">
         <div className="flex items-center justify-between rounded-full border border-gold/20 bg-ivory/80 backdrop-blur-xl px-5 md:px-8 py-3 shadow-divine">
 
-          <a href="#" className="flex items-center mx-auto md:mx-0">
+          <a href="#hero" className="flex items-center mx-auto md:mx-0">
             <img
               src={logo}
               alt="NAVAM"
@@ -157,7 +160,10 @@ function Nav() {
 /* ---------------- HERO ---------------- */
 function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center pt-24 pb-12">
+    <section
+  id="hero"
+  className="relative flex min-h-screen items-center justify-center pt-24 pb-12"
+>
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroDiya})` }}
@@ -507,7 +513,7 @@ function Navagrahas() {
 const PERFORMERS = [
   { name: "Abhi Dutt", role: "Bhakti Rock · Lead Voice", img: artistAbhi },
   { name: "JJ Vyck", role: "Contemporary Devotional", img: artistJJ },
-  { name: "Anuj Rehan", role: "Classical Vocalist", img: artistAnuj },
+  { name: "Shri. Siddhivinayak Pandits", role: "Mantra Chanting", img: artistAnuj },
   { name: "Swami Vedraj", role: "Spiritual Discourse", img: artistSwami },
 ];
 
@@ -523,7 +529,7 @@ function Performers() {
           <Ornament className="mt-6" />
         </motion.div>
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {PERFORMERS.map((p, i) => (
             <motion.div
               key={p.name}
@@ -795,6 +801,15 @@ function FinalCTA() {
   >
     <Phone size={18} />
     <span>+91 90820 88736</span>
+  </a>
+    <a
+    href="https://maps.app.goo.gl/qmxN2RekZ2cKzfVBA"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-gold-deep transition"
+  >
+    <MapPin size={18} />
+    <span>Location</span>
   </a>
 
   <a
