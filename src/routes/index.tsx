@@ -89,6 +89,7 @@ function NavamLanding() {
         <Navagrahas />
         <Performers />
         <SpiritualLeader />
+        <SwamiVedraj />
         <SocialProof />
         <FAQ />
         <FinalCTA />
@@ -105,52 +106,120 @@ function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setVisible(window.scrollY < 50);
+      setVisible(window.scrollY < 120);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
     <header
-      className={`fixed top-4 left-0 right-0 z-50 px-4 transition-all duration-500 ${
+      className={`fixed top-8 left-0 right-3 z-50 px-4 transition-all duration-500 ${
         visible
           ? "opacity-100 translate-y-0"
           : "opacity-0 -translate-y-10 pointer-events-none"
       }`}
     >
       <div className="mx-auto max-w-5xl">
-        <div className="flex items-center justify-between rounded-full border border-gold/20 bg-ivory/80 backdrop-blur-xl px-5 md:px-8 py-3 shadow-divine">
+        <div className="flex items-center justify-center gap-4 lg:gap-8">
 
-          <a href="#hero" className="flex items-center mx-auto md:mx-0">
+          {/* Left Pill */}
+          <div
+            className="
+              hidden md:flex
+              items-center
+              gap-6
+              px-12
+              py-6
+              rounded-full
+              border border-gold/20
+              bg-ivory/80
+              backdrop-blur-xl
+              shadow-divine
+            "
+          >
+            <a
+              href="#experience"
+              className="text-sm uppercase tracking-[0.2em] text-brass/80 hover:text-gold-deep transition"
+            >
+              Experience
+            </a>
+
+            <a
+              href="#planets"
+              className="text-sm uppercase tracking-[0.2em] text-brass/80 hover:text-gold-deep transition"
+            >
+              Navagrahas
+            </a>
+          </div>
+
+          {/* Logo */}
+          <a
+            href="#hero"
+            className="relative shrink-0 z-10"
+          >
             <img
               src={logo}
-              alt="NAVAM"
-              className="h-12 md:h-20 w-auto object-contain"
+              alt="Sacred Souls"
+              className="
+                h-24
+                sm:h-28
+                md:h-32
+                lg:h-36
+                w-auto
+                object-contain
+                drop-shadow-xl
+              "
             />
           </a>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-[0.2em] text-brass/80">
-            <a href="#experience" className="hover:text-gold-deep transition">
-              Experience
-            </a>
-            <a href="#planets" className="hover:text-gold-deep transition">
-              Navagrahas
-            </a>
-            <a href="#performers" className="hover:text-gold-deep transition">
+          {/* Right Pill */}
+          <div
+            className="
+              hidden md:flex
+              items-center
+              gap-6
+              px-12
+              py-6
+              rounded-full
+              border border-gold/20
+              bg-ivory/80
+              backdrop-blur-xl
+              shadow-divine
+            "
+          >
+            <a
+              href="#performers"
+              className="text-sm uppercase tracking-[0.2em] text-brass/80 hover:text-gold-deep transition"
+            >
               Performers
             </a>
-          </nav>
 
-          <a
-            href="https://www.district.in/events/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex rounded-full bg-gradient-gold px-6 py-3 text-xs uppercase tracking-[0.25em] text-ivory shadow-gold hover:scale-105 transition"
-          >
-            Reserve
-          </a>
+            <a
+              href="https://www.district.in/events/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                rounded-full
+                bg-gradient-gold
+                px-5
+                py-2.5
+                text-xs
+                uppercase
+                tracking-[0.25em]
+                text-ivory
+                shadow-gold
+                hover:scale-105
+                transition
+              "
+            >
+              Reserve
+            </a>
+          </div>
 
         </div>
       </div>
@@ -161,23 +230,41 @@ function Nav() {
 function Hero() {
   return (
     <section
-  id="hero"
-  className="relative flex min-h-screen items-center justify-center pt-24 pb-12"
->
+      id="hero"
+      className="relative flex min-h-screen items-center justify-center pt-40 md:pt-52 pb-12"
+    >
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroDiya})` }}
       />
+
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-ivory/40 via-ivory/30 to-ivory" />
+
+      {/* Particles */}
       <Particles count={50} />
 
-      {/* corner ornaments */}
-      <div className="absolute left-6 top-24 w-16 h-16 text-gold"><CornerOrnament className="w-full h-full" /></div>
-      <div className="absolute right-6 top-24 w-16 h-16 text-gold scale-x-[-1]"><CornerOrnament className="w-full h-full" /></div>
-      <div className="absolute left-6 bottom-6 w-16 h-16 text-gold scale-y-[-1]"><CornerOrnament className="w-full h-full" /></div>
-      <div className="absolute right-6 bottom-6 w-16 h-16 text-gold scale-[-1]"><CornerOrnament className="w-full h-full" /></div>
+      {/* Corner ornaments */}
+      <div className="absolute left-6 top-24 w-16 h-16 text-gold">
+        <CornerOrnament className="w-full h-full" />
+      </div>
 
+      <div className="absolute right-6 top-24 w-16 h-16 text-gold scale-x-[-1]">
+        <CornerOrnament className="w-full h-full" />
+      </div>
+
+      <div className="absolute left-6 bottom-6 w-16 h-16 text-gold scale-y-[-1]">
+        <CornerOrnament className="w-full h-full" />
+      </div>
+
+      <div className="absolute right-6 bottom-6 w-16 h-16 text-gold scale-[-1]">
+        <CornerOrnament className="w-full h-full" />
+      </div>
+
+      {/* Content */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+
         <motion.p
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -194,13 +281,12 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.2 }}
           className="mt-6 font-display font-extrabold text-5xl sm:text-7xl md:text-8xl leading-[1.05]"
-style={{
-  color: "#926c15",
-  
-}}
+          style={{ color: "#926c15" }}
         >
           MAHA NAVAGRAHA
-          <span className="block font-extrabold text-4xl sm:text-6xl md:text-7xl mt-2">PUJA · 2026</span>
+          <span className="block font-extrabold text-4xl sm:text-6xl md:text-7xl mt-2">
+            PUJA · 2026
+          </span>
         </motion.h1>
 
         <motion.p
@@ -209,38 +295,38 @@ style={{
           transition={{ duration: 1.2, delay: 0.6 }}
           className="mt-8 font-serif text-xl sm:text-2xl text-brass max-w-3xl mx-auto italic"
         >
-          A Journey of Cosmic Alignment Through Devotion, Music &amp; Divine Energy
+          A Journey of Cosmic Alignment Through Devotion, Music & Divine Energy
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
-         className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-lg md:text-xl uppercase tracking-[0.25em] text-brass/90"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-lg md:text-xl uppercase tracking-[0.25em] text-brass/90"
         >
           <span>19 July 2026</span>
           <span className="hidden sm:inline text-gold">◆</span>
-          <span> Mumbai</span>
+          <span>Shanmukhnanda Auditorium Mumbai</span>
           <span className="hidden sm:inline text-gold">◆</span>
           <span>6:00 PM Onwards</span>
         </motion.div>
 
         <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 1.1 }}
-  className="mt-10 flex justify-center"
->
-  <a
-    href="https://www.district.in/events/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
-  >
-    <span className="relative z-10">Reserve Your Seat</span>
-    <span className="absolute inset-0 animate-shimmer" />
-  </a>
-</motion.div>
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.1 }}
+          className="mt-10 flex justify-center"
+        >
+          <a
+            href="https://www.district.in/events/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
+          >
+            <span className="relative z-10">Reserve Your Seat</span>
+            <span className="absolute inset-0 animate-shimmer" />
+          </a>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -250,6 +336,7 @@ style={{
         >
           <Countdown />
         </motion.div>
+
       </div>
     </section>
   );
@@ -385,9 +472,28 @@ function Timeline() {
                 </div>
               </motion.div>
             ))}
+
           </div>
         </div>
       </motion.div>
+          {/* CTA BUTTON */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="mt-16 flex justify-center"
+    >
+      <a
+        href="https://www.district.in/events/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
+      >
+        <span className="relative z-10">Reserve Your Seat</span>
+        <span className="absolute inset-0 animate-shimmer" />
+      </a>
+    </motion.div>
     </section>
   );
 }
@@ -504,10 +610,46 @@ function Navagrahas() {
             <p className="mt-2 font-serif text-lg text-brass italic">{PLANETS[active].meaning}</p>
           </motion.div>
         )}
+        {active !== null && (
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    className="mt-12 text-center"
+  >
+    <p className="font-display text-2xl text-gold-deep">
+      {PLANETS[active].name}
+    </p>
+    <p className="mt-2 font-serif text-lg text-brass italic">
+      {PLANETS[active].meaning}
+    </p>
+  </motion.div>
+)}
+
+{/* CTA BUTTON */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="mt-16 flex justify-center"
+>
+  <a
+    href="https://www.district.in/events/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
+  >
+    <span className="relative z-10">Reserve Your Seat</span>
+    <span className="absolute inset-0 animate-shimmer" />
+  </a>
+</motion.div>
       </div>
     </section>
   );
 }
+
+
+
 
 /* ---------------- PERFORMERS ---------------- */
 const PERFORMERS = [
@@ -570,7 +712,7 @@ const PERFORMERS = [
 function SpiritualLeader() {
   return (
     <section className="relative py-32 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-center">
         <motion.div {...fadeUp} className="group relative">
           <div className="absolute -inset-4 rounded-3xl bg-gradient-gold opacity-20 blur-2xl transition-all duration-700 group-hover:opacity-40" />
 <div className="relative overflow-hidden rounded-2xl shadow-divine border border-gold/30">
@@ -579,8 +721,8 @@ function SpiritualLeader() {
     src={spiritualLeader}
     alt="Dr. Kiran Anand Namboothiri"
     loading="lazy"
-    width={1280}
-    height={1440}
+    width={640  }
+    height={480}
     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
   />
 
@@ -599,9 +741,9 @@ function SpiritualLeader() {
           <p className="mt-2 font-serif italic text-lg text-brass/70">Chief Spiritual Guide</p>
           <Ornament className="my-8 justify-start" />
           <p className="font-serif text-lg text-brass/90 leading-relaxed">
-            A revered Vedic scholar with decades devoted to the sacred sciences of Jyotish and ritual practice.
-            Dr. Namboothiri carries forward an unbroken lineage of priestly wisdom, guiding the Maha Navagraha
-            Puja with precise mantras, ancient yantras, and a serene clarity that has graced temples across India.
+            Dr. Kiran Anand Namboothiri is a distinguished Vedic scholar, spiritual guide, and practitioner rooted in Kerala's revered Namboothiri tradition. With deep expertise in Vedic rituals, sacred ceremonies, and ancient spiritual sciences, he has dedicated his life to preserving and sharing India's timeless wisdom. Through his teachings and spiritual guidance, he inspires individuals to cultivate inner harmony, devotion, and a deeper connection with the divine while upholding the authenticity of traditional Vedic practices.
+
+For the Maha Navagraha Puja event, this version aligns well with the spiritual and devotional positioning of the festival while maintaining credibility and reverence..
           </p>
           <p className="mt-4 font-serif text-lg text-brass/80 leading-relaxed">
             Under his guidance, every chant, every offering, every flame becomes a vessel for cosmic alignment.
@@ -611,7 +753,71 @@ function SpiritualLeader() {
     </section>
   );
 }
+/* ---------------- SWAMI VEDRAJ ---------------- */
+function SwamiVedraj() {
+  return (
+    <section className="relative py-32 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-center">
 
+        <motion.div {...fadeUp} className="group relative max-w-md mx-auto">
+          <div className="absolute -inset-4 rounded-3xl bg-gradient-gold opacity-20 blur-2xl transition-all duration-700 group-hover:opacity-40" />
+
+          <div className="relative overflow-hidden rounded-2xl shadow-divine border border-gold/30">
+            <img
+              src={artistSwami}
+              alt="Swami Vedraj"
+              loading="lazy"
+              className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+
+            <span className="absolute inset-0 animate-shimmer opacity-0 group-hover:opacity-100 transition" />
+          </div>
+
+          <div className="absolute -top-4 -left-4 w-20 h-20 text-gold">
+            <CornerOrnament className="w-full h-full" />
+          </div>
+
+          <div className="absolute -bottom-4 -right-4 w-20 h-20 text-gold scale-[-1]">
+            <CornerOrnament className="w-full h-full" />
+          </div>
+        </motion.div>
+
+        <motion.div {...fadeUp}>
+          <p className="text-xs uppercase tracking-[0.5em] text-brass/70">
+            Vedic Mantra Chanting
+          </p>
+
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl text-gold-foil leading-tight">
+            Swami Vedraj
+          </h2>
+
+          <p className="mt-2 font-serif italic text-lg text-brass/70">
+            Vedic Mantra Chanter & Spiritual Guide
+          </p>
+
+          <Ornament className="my-8 justify-start" />
+
+          <p className="font-serif text-lg text-brass/90 leading-relaxed">
+            Leading the sacred Navagraha Mantra Chanting at the Maha Navagraha Puja, Swami
+Vedraj is a revered spiritual guide and Vedic practitioner dedicated to preserving and sharing
+the timeless wisdom of the Vedas. Through his teachings, discourses, and devotional
+practices, he has inspired countless seekers on their spiritual journey. His profound
+understanding of Vedic traditions and sacred chants creates a deeply uplifting and
+transformative spiritual experience for devotees.
+          </p>
+
+          <p className="mt-4 font-serif text-lg text-brass/80 leading-relaxed">
+            During the Maha Navagraha Puja, Swami Vedraj will lead the sacred
+            mantra chanting dedicated to all nine celestial planets, creating a
+            powerful vibrational field that invokes divine blessings, cosmic
+            harmony, and collective spiritual upliftment.
+          </p>
+        </motion.div>
+        
+      </div>
+    </section>
+  );
+}
 /* ---------------- TICKETS ---------------- */
 
 
@@ -817,13 +1023,7 @@ function FinalCTA() {
     <span>Location</span>
   </a>
 
-  <a
-    href="mailto:info@sacredsouls.in"
-    className="flex items-center gap-2 hover:text-gold-deep transition"
-  >
-    <Mail size={18} />
-    <span>info@sacredsouls.in</span>
-  </a>
+
 </div>
       </motion.div>
     </section>
