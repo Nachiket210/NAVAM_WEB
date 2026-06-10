@@ -360,7 +360,7 @@ function Intro() {
         </h2>
         <p className="mt-10 font-serif text-xl sm:text-2xl text-brass/90 leading-relaxed">
           A grand spiritual gathering uniting sacred Vedic rituals, the legendary Siddhivinayak Aarti,
-          the rhythmic thunder of the Nashik Dhol Pathak, and soul-stirring devotional music
+          the rhythmic thunder of the Nashik Dhol Pathak, and soul-stirring devotional music 
           all conducted under the guidance of renowned spiritual leaders.
         </p>
         <p className="mt-6 font-serif text-lg text-brass/70 italic">
