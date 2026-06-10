@@ -317,15 +317,20 @@ function Hero() {
           transition={{ duration: 1, delay: 1.1 }}
           className="mt-10 flex justify-center"
         >
-          <a
-            href="https://www.district.in/events/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
-          >
-            <span className="relative z-10">Reserve Your Seat</span>
-            <span className="absolute inset-0 animate-shimmer" />
-          </a>
+<a
+  href="https://www.district.in/events/"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => {
+    if ((window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout');
+    }
+  }}
+  className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
+>
+  <span className="relative z-10">Reserve Your Seat</span>
+  <span className="absolute inset-0 animate-shimmer" />
+</a>
         </motion.div>
 
         <motion.div
@@ -484,15 +489,20 @@ function Timeline() {
       transition={{ duration: 0.8 }}
       className="mt-16 flex justify-center"
     >
-      <a
-        href="https://www.district.in/events/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
-      >
-        <span className="relative z-10">Reserve Your Seat</span>
-        <span className="absolute inset-0 animate-shimmer" />
-      </a>
+<a
+  href="https://www.district.in/events/"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => {
+    if ((window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout');
+    }
+  }}
+  className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
+>
+  <span className="relative z-10">Reserve Your Seat</span>
+  <span className="absolute inset-0 animate-shimmer" />
+</a>
     </motion.div>
     </section>
   );
@@ -633,15 +643,20 @@ function Navagrahas() {
   transition={{ duration: 0.8 }}
   className="mt-16 flex justify-center"
 >
-  <a
-    href="https://www.district.in/events/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
-  >
-    <span className="relative z-10">Reserve Your Seat</span>
-    <span className="absolute inset-0 animate-shimmer" />
-  </a>
+<a
+  href="https://www.district.in/events/"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => {
+    if ((window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout');
+    }
+  }}
+  className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
+>
+  <span className="relative z-10">Reserve Your Seat</span>
+  <span className="absolute inset-0 animate-shimmer" />
+</a>
 </motion.div>
       </div>
     </section>
@@ -973,12 +988,20 @@ function FinalCTA() {
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="https://www.district.in/events/"
-            className="rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
-          >
-            Book Now
-          </a>
+<a
+  href="https://www.district.in/events/"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => {
+    if ((window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout');
+    }
+  }}
+  className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
+>
+  <span className="relative z-10">Book Now</span>
+  <span className="absolute inset-0 animate-shimmer" />
+</a>
  
         </div>
         <Ornament className="mt-12" />
