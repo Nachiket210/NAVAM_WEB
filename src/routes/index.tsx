@@ -200,24 +200,10 @@ function Nav() {
             </a>
 
             <a
-              href="https://www.district.in/events/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                rounded-full
-                bg-gradient-gold
-                px-5
-                py-2.5
-                text-xs
-                uppercase
-                tracking-[0.25em]
-                text-ivory
-                shadow-gold
-                hover:scale-105
-                transition
-              "
+              href="#finalcta"
+              className="text-sm uppercase tracking-[0.2em] text-brass/80 hover:text-gold-deep transition"
             >
-              Reserve
+              Contact
             </a>
           </div>
 
@@ -970,7 +956,10 @@ function FAQ() {
 /* ---------------- FINAL CTA ---------------- */
 function FinalCTA() {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section
+      id="finalcta"
+      className="relative py-32 overflow-hidden"
+    >
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${templeBg})` }}
@@ -999,7 +988,7 @@ function FinalCTA() {
   }}
   className="group relative overflow-hidden rounded-full bg-gradient-gold px-10 py-4 text-sm uppercase tracking-[0.3em] text-ivory shadow-divine hover:scale-105 transition"
 >
-  <span className="relative z-10">Book Now</span>
+  <span className="relative z-10">Reserve Your Seat</span>
   <span className="absolute inset-0 animate-shimmer" />
 </a>
  
