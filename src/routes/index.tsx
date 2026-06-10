@@ -360,7 +360,7 @@ function Intro() {
         </h2>
         <p className="mt-10 font-serif text-xl sm:text-2xl text-brass/90 leading-relaxed">
           A grand spiritual gathering uniting sacred Vedic rituals, the legendary Siddhivinayak Aarti,
-          the rhythmic thunder of the Nashik Dhol Pathak, and soul-stirring devotional music —
+          the rhythmic thunder of the Nashik Dhol Pathak, and soul-stirring devotional music
           all conducted under the guidance of renowned spiritual leaders.
         </p>
         <p className="mt-6 font-serif text-lg text-brass/70 italic">
@@ -374,11 +374,11 @@ function Intro() {
 
 /* ---------------- TIMELINE ---------------- */
 const TIMELINE = [
-  { time: "6:00 PM", title: "Grand Nashik Dhol Procession", icon: "◉" },
-  { time: "6:15 PM", title: "Siddhivinayak Aarti", icon: "卐" },
-  { time: "6:30 PM", title: "Welcome & Invocation", icon: "ॐ" },
-  { time: "6:45 PM", title: "Devotional Concert & Sacred Music", icon: "♪" },
-  { time: "8:45 PM", title: "Refreshment Break", icon: "✦" },
+  { time: "6:30 PM", title: "Grand Nashik Dhol Procession", icon: "◉" },
+  { time: "6:45 PM", title: "Siddhivinayak Aarti", icon: "卐" },
+  { time: "7:00 PM", title: "Welcome & Invocation", icon: "ॐ" },
+  { time: "7:15 PM", title: "Devotional Concert & Sacred Music", icon: "♪" },
+  { time: "8:40 PM", title: "Refreshment Break", icon: "✦" },
   { time: "9:00 PM", title: "Maha Navagraha Puja", icon: "☀" },
   { time: "10:00 PM", title: "Prasad & Closing Ceremony", icon: "❀" },
 ];
@@ -741,9 +741,13 @@ function SpiritualLeader() {
           <p className="mt-2 font-serif italic text-lg text-brass/70">Chief Spiritual Guide</p>
           <Ornament className="my-8 justify-start" />
           <p className="font-serif text-lg text-brass/90 leading-relaxed">
-            Dr. Kiran Anand Namboothiri is a distinguished Vedic scholar, spiritual guide, and practitioner rooted in Kerala's revered Namboothiri tradition. With deep expertise in Vedic rituals, sacred ceremonies, and ancient spiritual sciences, he has dedicated his life to preserving and sharing India's timeless wisdom. Through his teachings and spiritual guidance, he inspires individuals to cultivate inner harmony, devotion, and a deeper connection with the divine while upholding the authenticity of traditional Vedic practices.
-
-For the Maha Navagraha Puja event, this version aligns well with the spiritual and devotional positioning of the festival while maintaining credibility and reverence..
+            Chief Priest of Guruvayur Temple and the officiating priest for the Maha Navagraha
+Puja, Dr. Kiran Anand Namboothiri is a distinguished Vedic scholar, Ayurvedic physician,
+and spiritual practitioner from Kerala's revered Namboothiri tradition. Renowned for his
+expertise in Vedic rituals, temple traditions, and sacred ceremonies, he has dedicated his life
+to preserving and propagating India's spiritual heritage. At the Maha Navagraha Puja, he will
+personally lead and perform the sacred rituals, invoking divine grace, planetary harmony,
+prosperity, and spiritual well-being for all devotees.
           </p>
           <p className="mt-4 font-serif text-lg text-brass/80 leading-relaxed">
             Under his guidance, every chant, every offering, every flame becomes a vessel for cosmic alignment.
