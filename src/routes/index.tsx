@@ -901,7 +901,7 @@ function SocialProof() {
 
 /* ---------------- FAQ ---------------- */
 const FAQS = [
-  { q: "What is Navagraha Puja?", a: "Navagraha Puja is a sacred Vedic ritual honoring the nine celestial bodies — the Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, Rahu and Ketu — believed to influence our karmic journey." },
+  { q: "What is Navagraha Puja?", a: "Navagraha Puja is a sacred Vedic ritual honoring the nine celestial bodies , the Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, Rahu and Ketu believed to influence our karmic journey." },
   { q: "What should I bring?", a: "Just yourself, an open heart, and your ticket. Devotional attire is appreciated but not mandatory." },
   { q: "Is parking available?", a: "Yes, ample valet and self-parking is available at the Shanmukhananda Auditorium complex." },
   { q: "Are children allowed?", a: "Children above 5 years are welcome. Each attendee, including children, requires a ticket." },
@@ -975,12 +975,7 @@ function FinalCTA() {
           >
             Book Now
           </a>
-          <a
-            href="#"
-            className="rounded-full border border-gold/60 bg-ivory/40 backdrop-blur px-10 py-4 text-sm uppercase tracking-[0.3em] text-brass hover:bg-ivory/70 transition"
-          >
-            Join WhatsApp Community
-          </a>
+ 
         </div>
         <Ornament className="mt-12" />
         
@@ -1025,9 +1020,29 @@ function FinalCTA() {
 
 
 </div>
+<div className="mt-12">
+  <Ornament />
+
+  <p className="mt-6 text-xs uppercase tracking-[0.5em] text-brass/60">
+    Venue
+  </p>
+
+  <p className="mt-4 font-display text-xl sm:text-2xl text-gold-foil">
+    Sri Shanmukhananda
+  </p>
+
+  <p className="font-display text-lg sm:text-xl text-brass">
+    Chandrasekarendra Saraswathi Auditorium
+  </p>
+
+  <p className="mt-2 text-brass/70">
+    Mumbai
+  </p>
+</div>
       </motion.div>
     </section>
   );
+  
 }
 function ScrollToTopButton() {
   const [visible, setVisible] = useState(false);
