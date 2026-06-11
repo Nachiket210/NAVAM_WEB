@@ -304,7 +304,7 @@ function Hero() {
           className="mt-10 flex justify-center"
         >
 <a
-  href="https://www.district.in/events/"
+  href="https://www.district.in/events/navam-2026-buy-tickets?utm_source=Social&af_xp=custom&af_force_deeplink=true&source_caller=api&pid=Social&is_retargeting=true&af_click_lookback=undefinedd&shortlink=4efkluk6&utm_medium=District&utm_campaign=Navam_Social_District_260611&deep_link_value=edition%3A%2F%2Fresolve-onelink%3Flink_params%3D%7B%22event_id%22%3A%226a27d7191c0262b227a4841b%22%2C%22event_slug%22%3A%22navam-2026%22%7D%26link_type%3Dopen_event_details_page%26utm_source%3DSocial%26utm_medium%3DDistrict%26utm_campaign%3DNavam_Social_District_260611&af_reengagement_window=undefinedd&c=Navam_Social_District_260611"
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => {
@@ -476,7 +476,7 @@ function Timeline() {
       className="mt-16 flex justify-center"
     >
 <a
-  href="https://www.district.in/events/"
+  href="https://www.district.in/events/navam-2026-buy-tickets?utm_source=Social&af_xp=custom&af_force_deeplink=true&source_caller=api&pid=Social&is_retargeting=true&af_click_lookback=undefinedd&shortlink=4efkluk6&utm_medium=District&utm_campaign=Navam_Social_District_260611&deep_link_value=edition%3A%2F%2Fresolve-onelink%3Flink_params%3D%7B%22event_id%22%3A%226a27d7191c0262b227a4841b%22%2C%22event_slug%22%3A%22navam-2026%22%7D%26link_type%3Dopen_event_details_page%26utm_source%3DSocial%26utm_medium%3DDistrict%26utm_campaign%3DNavam_Social_District_260611&af_reengagement_window=undefinedd&c=Navam_Social_District_260611"
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => {
@@ -630,7 +630,7 @@ function Navagrahas() {
   className="mt-16 flex justify-center"
 >
 <a
-  href="https://www.district.in/events/"
+  href="https://www.district.in/events/navam-2026-buy-tickets?utm_source=Social&af_xp=custom&af_force_deeplink=true&source_caller=api&pid=Social&is_retargeting=true&af_click_lookback=undefinedd&shortlink=4efkluk6&utm_medium=District&utm_campaign=Navam_Social_District_260611&deep_link_value=edition%3A%2F%2Fresolve-onelink%3Flink_params%3D%7B%22event_id%22%3A%226a27d7191c0262b227a4841b%22%2C%22event_slug%22%3A%22navam-2026%22%7D%26link_type%3Dopen_event_details_page%26utm_source%3DSocial%26utm_medium%3DDistrict%26utm_campaign%3DNavam_Social_District_260611&af_reengagement_window=undefinedd&c=Navam_Social_District_260611https://www.district.in/events/navam-2026-buy-tickets?utm_source=Social&af_xp=custom&af_force_deeplink=true&source_caller=api&pid=Social&is_retargeting=true&af_click_lookback=undefinedd&shortlink=4efkluk6&utm_medium=District&utm_campaign=Navam_Social_District_260611&deep_link_value=edition%3A%2F%2Fresolve-onelink%3Flink_params%3D%7B%22event_id%22%3A%226a27d7191c0262b227a4841b%22%2C%22event_slug%22%3A%22navam-2026%22%7D%26link_type%3Dopen_event_details_page%26utm_source%3DSocial%26utm_medium%3DDistrict%26utm_campaign%3DNavam_Social_District_260611&af_reengagement_window=undefinedd&c=Navam_Social_District_260611"
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => {
@@ -978,7 +978,7 @@ function FinalCTA() {
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
 <a
-  href="https://www.district.in/events/"
+  href="https://www.district.in/events/navam-2026-buy-tickets?utm_source=Social&af_xp=custom&af_force_deeplink=true&source_caller=api&pid=Social&is_retargeting=true&af_click_lookback=undefinedd&shortlink=4efkluk6&utm_medium=District&utm_campaign=Navam_Social_District_260611&deep_link_value=edition%3A%2F%2Fresolve-onelink%3Flink_params%3D%7B%22event_id%22%3A%226a27d7191c0262b227a4841b%22%2C%22event_slug%22%3A%22navam-2026%22%7D%26link_type%3Dopen_event_details_page%26utm_source%3DSocial%26utm_medium%3DDistrict%26utm_campaign%3DNavam_Social_District_260611&af_reengagement_window=undefinedd&c=Navam_Social_District_260611"
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => {
